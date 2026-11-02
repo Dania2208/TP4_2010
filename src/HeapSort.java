@@ -1,4 +1,5 @@
 
+import java.util.*;
 public class HeapSort {
 
 	private enum SortingType {
@@ -32,7 +33,6 @@ public class HeapSort {
                 arrayToSort[i] = pq.poll();
             }
         }
-    }
 		
 	}
 	
@@ -70,4 +70,5 @@ public class HeapSort {
         heapSort(arrayDesc, SortingType.DESCENDING);
         System.out.println("Après le tri : " + Arrays.toString(arrayDesc));
 	
+}
 }
