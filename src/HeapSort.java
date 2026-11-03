@@ -6,7 +6,16 @@ public class HeapSort {
 		ASCENDING,
 		DESCENDING
 	}
-	
+
+    /*
+     * Complexité temporelle : O(n log n)
+     *   - Il y a n insertions (add) dans la file de priorité, chacune en O(log n) -> O(n log n)
+     *   - Il y a n retraits (poll) de la racine, chacun en O(log n) -> O(n log n)
+     *   - Total : O(n log n) + O(n log n) = O(n log n)
+     *
+     * Complexité spatiale : O(n)
+     *   - La file de priorité contient les n éléments du tableau.
+     */
 	static void heapSort(int[] arrayToSort, SortingType sort) {
 		// TODO: Faire le triage par monceau sur le tableau en entrée
 		if (arrayToSort == null || arrayToSort.length <= 1) {

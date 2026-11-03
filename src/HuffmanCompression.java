@@ -211,7 +211,8 @@ public class HuffmanCompression {
         
         if (pq.size() == 1) {
             HuffmanNode single = pq.poll();
-            return new HuffmanNode(single.frequency, single, null);
+            HuffmanNode emptyLeaf = new HuffmanNode((byte) (single.character + 1), 0);
+            return new HuffmanNode(single.frequency, single, emptyLeaf);
         }
         
         while (pq.size() > 1) {
@@ -239,7 +240,8 @@ public class HuffmanCompression {
         
         if (nodes.size() == 1) {
             HuffmanNode single = nodes.get(0);
-            return new HuffmanNode(single.frequency, single, null);
+            HuffmanNode emptyLeaf = new HuffmanNode((byte) (single.character + 1), 0);
+            return new HuffmanNode(single.frequency, single, emptyLeaf);
         }
         
         while (nodes.size() > 1) {
